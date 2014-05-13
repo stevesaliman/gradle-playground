@@ -1,0 +1,5 @@
+task show << {
+  println "Hello from Brother"
+  println "Parent dir = ${project.parent.projectDir}"
+}
+

@@ -1,0 +1,27 @@
+#!groovy
+
+task show << { 
+  if ( project.hasProperty('parentVar') ) {
+    println "parentVar=${parentVar}"
+  }
+  if ( project.hasProperty('childVar') ) {
+    println "childVar=${childVar}"
+  }
+  if ( project.hasProperty('grandchildVar') ) {
+    println "grandchildVar=${grandchildVar}"
+  }
+	if ( gradle.hasProperty('parentVar') ) {
+	  println "gradle parent = ${gradle.parentVar}"
+  }
+	if ( gradle.hasProperty('mavenCentralUsername') ) {
+	  println "gradle username = ${gradle.mavenCentralUsername}"
+	}
+
+	// def x = gradle.ext
+	println "Gradle properties = ${gradle.ext}"
+	// println "Gradle properties: "${x}"
+	gradle.ext.properties.each { k, v ->
+	  println "gradle ${k}=${v}"
+	}
+}
+    

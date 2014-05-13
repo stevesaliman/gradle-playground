@@ -1,0 +1,28 @@
+buildscript {
+  repositories {
+    mavenLocal()
+  }
+  dependencies {
+    classpath "net.saliman:gradle-properties-plugin:1.3.2-SNAPSHOT"
+  }
+}
+
+ext.prop = 'ParentValue'
+
+// apply plugin: net.saliman.gradle.plugin.properties.PropertiesPlugin
+includeFlat 'brother'
+
+println "Initial settingsDir=${settingsDir}"
+println "Initial rootDir=${rootDir}"
+rootProject.projectDir = new File(settingsDir, '../parent/')
+println "Final settings dir=${settingsDir}"
+println "Final root dir=${rootDir}"
+// println "Master settings var=${parentVar}"
+// println "Master settingVar=${settingVar}"
+ext.properties.each { k, v ->
+  println"Master Setting property ${k}=${v}"
+}
+
+
+// gradle.ext.parentVar = parentVar
+gradle.ext.mavenCentralUsername = mavenCentralUsername
