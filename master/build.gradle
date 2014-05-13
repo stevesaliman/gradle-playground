@@ -1,9 +1,3 @@
 println '*' * (27 + "$projectDir".size())
 println "* Evaluated Project from $projectDir *"
 println '*' * (27 + "$projectDir".size())
-
-task show << {
-  println "Hello from Brother"
-  println "Parent dir = ${project.parent.projectDir}"
-}
-

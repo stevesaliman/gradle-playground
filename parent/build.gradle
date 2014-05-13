@@ -1,3 +1,7 @@
+println '*' * (27 + "$projectDir".size())
+println "* Evaluated Project from $projectDir *"
+println '*' * (27 + "$projectDir".size())
+
 // buildscript {
   // repositories {
     // mavenLocal()
