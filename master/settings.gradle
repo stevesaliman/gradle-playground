@@ -25,4 +25,4 @@ ext.properties.each { k, v ->
 
 
 // gradle.ext.parentVar = parentVar
-gradle.ext.mavenCentralUsername = mavenCentralUsername
+// gradle.ext.mavenCentralUsername = mavenCentralUsername
