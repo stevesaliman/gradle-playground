@@ -14,7 +14,7 @@ includeFlat 'brother'
 
 println "Initial settingsDir=${settingsDir}"
 println "Initial rootDir=${rootDir}"
-rootProject.projectDir = new File(settingsDir, '../parent/')
+// rootProject.projectDir = new File(settingsDir, '../parent/')
 println "Final settings dir=${settingsDir}"
 println "Final root dir=${rootDir}"
 // println "Master settings var=${parentVar}"
